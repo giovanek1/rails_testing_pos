@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @list.title %>
+</p>
+
+<p>
+  <strong>was bought:</strong>
+  <%= @list.was_bought %>
+</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Quantity</th>
+  </tr>
+  <strong>Products:</strong>
+
+  <% @list.products.each do |product| %>
+    <tr>
+      <th><%= product.name %></th>
+      <th><%= product.quantity %></th>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Back', lists_path %>
